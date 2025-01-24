@@ -1,1 +1,1 @@
-# netlify-auth
+# Netlify Authentication
