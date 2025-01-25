@@ -1,0 +1,7 @@
+.auth ul{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    display: flex;
+    gap: 12px;
+}
