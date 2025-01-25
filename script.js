@@ -17,6 +17,7 @@ document.getElementById('contentForm').addEventListener('submit', async (e) => {
         document.getElementById('contentForm').reset();
       } else {
         alert(result.message || 'Failed to create content');
+        console.log(result.message);
       }
     } catch (error) {
       console.error('Error:', error);
