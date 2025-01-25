@@ -15,7 +15,7 @@ exports.handler = async (event) => {
       accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
     });
 
-    const space = await client.getSpace(process.env.CONTENTFUL_SPACE_ID);
+    const space = await client.getSpace(process.env.SPACE_ID);
     const environment = await space.getEnvironment(process.env.CONTENTFUL_ENVIRONMENT);
 
     const entry = await environment.createEntry(process.env.CONTENT_TYPE_ID, {

@@ -5,6 +5,7 @@ document.getElementById('contentForm').addEventListener('submit', async (e) => {
     const description = document.getElementById('description').value;
     const ranking = document.getElementById('ranking').value;
   
+    const resp = document.getElementById('resp');
     try {
       const response = await fetch('/.netlify/functions/createContent', {
         method: 'POST',
@@ -12,12 +13,14 @@ document.getElementById('contentForm').addEventListener('submit', async (e) => {
       });
   
       const result = await response.json();
+      console.log(result);
       if (response.ok) {
         alert('Content created successfully');
         document.getElementById('contentForm').reset();
       } else {
         alert(result.message || 'Failed to create content');
         console.log(result.message);
+
       }
     } catch (error) {
       console.error('Error:', error);
